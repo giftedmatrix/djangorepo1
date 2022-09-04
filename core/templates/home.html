@@ -1,0 +1,214 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block title%} Nigeria - Watch TV Shows Online, Watch Movies Online.{%endblock title%}
+{%block content%}
+
+<div class="overflow-hidden bg-black">
+    <section id="section1" class="flex flex-col justify-items-center border-b-8 border-gray-700">
+        {%include 'partials/navbar.html'%}
+        <div class="xl:container xl:mx-auto">
+            <div class="mx-3 text-center text-white mt-20 md:mt-40">
+                <p class="font-bold container mx-auto sm:px-16 sm:text-5xl md:px-28 lg:px-60 xl:px-80 2xl:px-96 text-3xl md:text-5xl xl:text-6xl">
+                    Unlimited movies, TV shows, and more.
+                </p>
+                <p class="mt-4 text-xl font-semibold md:text-2xl md:mt-6">
+                    Watch anywhere. Cancel anytime.
+                </p>            
+                <p class="mt-4 mb:4 text-center sm:px-32 md:px-20 leading-tight md:mt-6 text-lg md:text-xl font-semibold">
+                    Ready to watch? Enter your email to create or restart your membership.
+                </p> 
+            </div>
+            <div class="flex justify-center pb-1 pt-3 md:pb-2 md:pt-5">
+                <form action="{%url 'account_signup'%}">
+                    <div class="flex-col md:flex mb-24 md:mb-36 md:flex-row md:space-x-0">
+                        <input required type="email" name="email" id="id_email" class="w-80 h-14 rounded-tl-sm pl-3 rounded-bl-sm mx-28 sm:mx-20 md:mx-0 sm:w-96 md:w-96 md:ml-0 p-2 text-md font-semibold placeholder-gray-500" placeholder="Email address">     
+                        <button class="bg-red-600 h-9 w-32 md:w-48 md:h-14  rounded-tr-sm rounded-br-sm text-white text-md md:text-2xl items-center mx-52 flex justify-center mt-4 md:mt-0 px-2 md:px-4 py-2">Get Started<i class="fa fa-chevron-right text-white px-2 md:px-2" aria-hidden="true"></i></button>   
+                    </div>
+                </form>    
+            </div>
+        </div>
+    </section>
+    <section class="bg-black flex md:py-20 flex-col border-b-8 border-gray-800 lg:border-b-0 items-center justify-center md:space-x-2 lg:container lg:mx-auto md:max-w-full md:flex-row">
+        <div class="md:w-1/2 py-12 md:pl-32">
+            <p class="items-center text-center text-white md:text-left font-semibold text-3xl md:text-5xl"> 
+                Enjoy on your TV.
+            </p>
+            <p class="text-white text-center leading-tight px-3 pt-4 md:pr-8 text-lg md:text-left md:px-0 md:text-2xl">
+                Watch on Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.
+            </p>
+        </div>
+        <div>
+            <img src="../static/tv.png" class="flex justify-center md:pr-12 -mt-12 md:-mt-20"alt="">
+        </div>              
+    </section>
+    <hr class="hidden lg:block">
+    <section class="flex flex-col-reverse md:py-20 md:flex-row md:justify-center bg-black border-b-8 border-gray-800 lg:border-b-0 lg:container lg:mx-auto">
+        <div class="container mx-auto max-w-lg mt-1 md:mt-10">
+            <img src="../static/netflix1.jpg" class="relative container mx-auto max-w-md md:max-w-xl flex justify-center -mt-12 md:-mt-20"alt="">
+            <div class="strange absolute container -mt-24 ml-16 pr-24 md:pr-48 sm:ml-32 max-w-min md:-mt-28 md:ml-20 bg-black border-2 border-gray-700 flex px-3 py-1 md:py-4 rounded-xl items-center">
+                <img src="../static/boxshot_netflix.png" class="w-12 h-16"alt="">
+                <p class="text-white font-semibold pl-6 text-md">
+                    Downloading...
+                </p>
+            </div>                
+        </div>
+        <div class="md:w-1/2 py-12 md:pr-24">
+            <p class="items-center text-center text-white md:text-left font-semibold px-8 md:px-0 text-2xl md:text-5xl">
+                Download your shows to watch offline.
+            </p>
+            <p class="text-white md:font-semibold text-center px-7 leading-tight pt-4 md:pr-8 text-lg md:text-left md:px-0 md:text-2xl">
+                Save your favorites easily and always have something to watch.
+            </p>
+        </div>
+    </section>
+    <hr class="hidden lg:block">
+    <section class="bg-black border-b-8 border-gray-800 flex md:text-left text-center md:justify-start py-14 md:pl-20 lg:border-b-0 lg:container lg:mx-auto">
+        <div class="md:w-1/2 py-12 md:pl-24">
+            <p class="items-center text-center text-white md:text-left font-semibold px-8 md:px-0 text-2xl md:text-5xl">
+                Watch everywhere.
+            </p>
+            <p class="text-white md:font-semibold px-3 sm:px-14 text-center leading-tight pt-4 md:pr-8 text-lg md:text-left md:px-0 md:text-2xl">
+                Stream unlimited movies and TV shows on your phone,tablet,laptop and TV.
+            </p>
+        </div>
+    </section>
+    <hr class="hidden lg:block">
+    <section class="flex flex-col-reverse md:py-20 md:flex-row md:justify-center bg-black border-b-8 border-gray-800 lg:border-b-0 lg:container lg:mx-auto">
+        <div>
+            <img src="../static/netflix2.png" class="flex justify-center md:pl-0 -mt-12 md:-mt-20"alt="">
+        </div>
+        <div class="md:w-1/2 py-12 md:pr-24">
+            <p class="items-center text-center text-white md:text-left font-semibold px-8 md:px-0 text-2xl md:text-5xl">
+                Create profiles for kids.
+            </p>
+            <p class="text-white md:font-semibold px-4 text-center leading-tight pt-4 md:pr-8 text-lg md:text-left md:px-0 md:text-2xl">
+                Send kids on adventure with their favorite characters in a space made just for them--free with your membership.
+            </p>
+        </div>
+    </section>
+    <hr class="hidden lg:block">
+    <section class="bg-black border-b-8 border-gray-800 md:container md:max-w-full md:flex md:justify-center">
+        <div>
+            <p class="text-3xl md:text-4xl lg:text-5xl text-white font-bold text-center pb-6 pt-12 md:pt-20 md:pb-10">
+                Frequently Asked Questions
+            </p>
+            <div class="flex flex-col md:justify-center sm:mx-20 md:max-w-6xl">
+                <div class="bg-gray-800 mb-2 flex items-center cursor-pointer">
+                    <p class="text-white p-3 pl-6 md:p-5 md:pl-6 text-lg md:text-2xl text-left">
+                        What is Netflix?
+                    </p>                   
+                </div>
+                <div class="bg-gray-800 mb-2 flex items-center cursor-pointer">
+                    <p class="text-white p-3 pl-6 md:p-5 md:pl-6 text-lg md:text-2xl text-left">
+                        How much does Netflix cost?
+                    </p>
+                </div>
+                <div class="bg-gray-800 mb-2 flex items-center cursor-pointer">
+                    <p class="text-white p-3 pl-6 md:p-5 md:pl-6 text-lg md:text-2xl text-left">
+                        Where can I watch?
+                    </p>
+                </div>
+                <div class="bg-gray-800 mb-2 flex items-center cursor-pointer">
+                    <p class="text-white p-3 pl-6 md:p-5 md:pl-6 text-lg md:text-2xl text-left">
+                        How do I cancel?
+                    </p>
+                </div>
+                <div class="bg-gray-800 mb-2 flex items-center cursor-pointer">
+                    <p class="text-white p-3 pl-6 md:p-5 md:pl-6 text-lg md:text-2xl text-left">
+                        What can I watch on Netflix?
+                    </p>
+                </div>
+                <div class="bg-gray-800 mb-2 flex items-center cursor-pointer">
+                    <p class="text-white p-3 pl-6 md:p-5 md:pl-6 text-lg md:text-2xl text-left">
+                        Is Netflix good for kids?
+                    </p>
+                </div>
+            </div>
+            <p class="mx-3 mt-4 mb:4 md:px-20 text-white text-center leading-tight md:mt-6 text-lg md:text-xl font-semibold">
+                Ready to watch? Enter your email to create or restart your membership.
+            </p> 
+            <div class="flex justify-center pb-1 pt-3 md:pb-2 md:pt-5">
+                <form action="">{%csrf_token%}
+                    <div class="flex-col md:flex mb-16 md:flex-row md:space-x-0">
+                        <form action="{%url 'account_signup'%}">
+                            <div class="flex-col md:flex mb-24 md:mb-36 md:flex-row md:space-x-0">
+                                <input required type="email" name="email" id="id_email" class="w-80 h-14 rounded-tl-sm pl-3 rounded-bl-sm mx-28 sm:mx-20 sm:w-96 md:w-96 md:mx-0 md:ml-0 p-2 text-md font-semibold placeholder-gray-500" placeholder="Email address">     
+                                <button class="bg-red-600 h-9 w-32 md:w-48 md:h-14  rounded-tr-sm rounded-br-sm text-white text-md md:text-2xl items-center mx-52 flex justify-center mt-4 md:mt-0 px-2 md:px-4 py-2">Get Started<i class="fa fa-chevron-right text-white px-2 md:px-2" aria-hidden="true"></i></button>   
+                            </div>
+                        </form>
+                    </div>
+                </form>
+                {%if form.errors%}
+                    <p class="text-sm text-yellow-700 pt-2">
+                        Please enter a valid email address
+                    </p>
+                {%endif%}
+            </div>
+        </div>           
+    </section>
+    <section class="bg-black flex md:justify-center space-t-12 pl-10 md:pl-0 pt-16 pb-7">
+        
+        <div class="md:hidden flex flex-row space-x-16">
+            <div>
+                <p class="text-gray-500 pb-8 cursor-pointer text-md hover:underline">
+                    Questions? Contact us.
+                </p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">FAQ</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Account</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Investor Relations</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Ways to Watch</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Privacy</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Corporate Information</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Speed Test</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Only on Netflix</p>
+                <p class="text-gray-500 pt-6 cursor-pointer text-sm">
+                    Netflix Nigeria
+                </p>
+            </div>
+            <div class="mt-14">
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Help Center</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Media Center</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Jobs</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Terms of Use</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Cookie Preferences</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Contact Us</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Legal Notices</p>
+            </div>
+        </div>
+        <div class="hidden md:space-x-28 md:flex flex-row">
+            <div>
+                <p class="text-gray-500 pb-8 cursor-pointer text-md hover:underline">
+                    Questions? Contact us.
+                </p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">FAQ</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Investor Relations</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Privacy</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Speed Test</p>
+                <p class="text-gray-500 pt-6 cursor-pointer text-sm">
+                    Netflix Nigeria
+                </p>
+            </div>
+            <div class="mt-14">
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Help Center</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Jobs</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Cookie Preferences</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Legal Notices</p>
+            </div>
+            <div class="mt-14">
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Account</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Ways to Watch</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Corporate Information</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Only on Netflix</p>
+            </div>
+            <div class="mt-14">
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Media</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Terms of Use</p>
+                <p class="text-gray-500 pb-3 cursor-pointer text-sm hover:underline">Contact Us</p>
+            </div>
+        </div>
+        
+    </section>
+    
+</div>
+
+{%endblock content%}           

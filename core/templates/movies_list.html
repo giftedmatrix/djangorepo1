@@ -1,0 +1,59 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block title%}
+
+{%endblock%}
+
+{%block content%}
+<div class="bg-black sm:pb-56">
+    <div class="bg-black pb-16 sm:pb-0">
+        <div class="overflow-hidden mx-4 py-2">
+            <section class="sm:hidden">{%include 'partials/navbar.html'%}</section> 
+            <section id="movies_list" class="bg-black hidden sm:container sm:mx-auto sm:flex flex-col space-y-12" style="background-image:url('{{showcase.flyers.url}}');width:100vw;height:53vw;">
+                {%include 'partials/navbar.html'%}
+                <div class="md:pt-3 lg:pt-28 xl:pt-64 ml-4">
+                    <div id="movie_title" class="opacity-0 trasition ease-in-out duration-1000">
+                        <div  class="text-white font-semibold pb-3 px-2 lg:pb-0 text-xl md:text-4xl xl:text-5xl">{{showcase.title}}</div>
+                        <div class=" text-white font-semibold lg:pt-12 px-2 sm:text-sm md:text-lg 2xl:text-2xl lg:text-xl w-1/2">{{showcase.description}}</div>
+                    </div> 
+                    <div class="flex pt-2 space-x-2 md:space-x-4 lg:mt-4">
+                        <a href="{% url 'core:play' movie_id=showcase.uuid %}">
+                            <button class="bg-white hover:bg-slate-300 rounded-md 2xl:h-12 xl:h-10 h-8 text-black mx-2 px-4 2xl:px-6 text-sm xl:text-2xl md:text-lg font-semibold transition ease-in duration-300">
+                                <i class="fa fa-play" aria-hidden="true"></i> &nbsp;Play
+                            </button>
+                        </a>
+                        <button id="info" class="bg-gray-400 bg-opacity-85 hover:bg-opacity-60 rounded-md 2xl:h-12 xl:h-10 h-8 text-white text-sm md:text-lg xl:text-2xl font-semibold px-4 2xl:px-6 transition ease-in duration-300">
+                            <i class="fa fa-info-circle"></i> &nbsp;More Info
+                        </button>
+                    </div>    
+                </div>           
+            </section>
+            <p class="text-gray-200 text-lg xl:text-3xl font-bold pt-5 md:ml-20 lg:ml-28 xl:ml-44">Popular on Netflix</p>
+            <div class="bg-black pb-0 md:pb-28 flex flex-wrap md:space-x-4 min-w-full justify-center md:space-y-2 md:m-3 md:flex-1">
+                {%for movie in movies%}
+                    <a href="{% url 'core:movie_info' movie_id=movie.uuid %}">
+                        <img class="xl:h-48 xl:w-48 md:h-40 2xl:w-72 justify-center w-40 h-32 sm:w-44 sm:h-36 object-contain border-0 border-gray-500 px-2 rounded-md" src="{{movie.flyers.url}}" alt="">
+                    </a>            
+                {%endfor%} 
+            </div>        
+        </div>
+    </div>
+</div>
+
+<script>
+    const more_info = document.getElementById('info')
+    const descript = document.getElementById('movie_title')
+
+    more_info.addEventListener('click', ()=>{
+        if (descript.classList.contains('opacity-0')){
+            descript.classList.remove('opacity-0')
+        }
+        else{
+            descript.classList.add('opacity-0')
+        }
+    })
+</script>
+    
+{%endblock%}
+2xl:h-full xl:h-full lg:h-full md:h-full h-screen sm:h-screen 2xl:pb-12 pb-32 sm:pb-56

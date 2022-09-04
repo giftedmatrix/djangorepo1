@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#index{
+    background-image: url('../static/indexpics.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#section1{
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('../static/netflix_bg.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;   
+}
+
+#bg_login{
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('../static/background_netflix.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;   
+    height:100vh;
+}
+
+
+#movies_list{
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3));
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+
+@media only screen and (max-width:345px)
+{
+    .strange{
+        margin-left: 3rem;
+        padding-right: 4rem;
+    }
+}
+
+ @media only screen and (min-width:384px)
+ {
+     .strange{
+         margin-left: 5rem;
+     }
+     #movies_list{
+        background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3));
+        background-repeat: no-repeat;
+        background-size:contain;
+    }
+ }
+
+ @media only screen and (min-width:414px)
+ {
+     .strange{
+         margin-left: 5.5rem;
+     }
+ }
+
+ @media only screen and (min-width:431px)
+ {
+     .strange{
+         margin-left: 6rem;
+     }
+     #movies_list{
+        background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3));
+        background-repeat: no-repeat;
+        background-size:cover;
+        height:50vh;
+    }
+ }
+
+ @media only screen and (min-width:447px)
+ {
+     .strange{
+         margin-left: 6.5rem;
+     }
+ }
+
+ @media only screen and (min-width:470px)
+ {
+     .strange{
+         margin-left: 7rem;
+     }
+ }
+
+ @media only screen and (min-width:483px)
+ {
+     .strange{
+         margin-left: 7.5rem;
+     }
+ }
+
+ @media only screen and (min-width:505px)
+ {
+     .strange{
+         margin-left: 8rem;
+     }
+     #movies_list{
+        background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3));
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+ }

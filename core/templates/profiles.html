@@ -1,0 +1,37 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block title%} - Profiles{%endblock%}
+
+{%block content%}
+<div class="h-screen bg-black md:h-screen">
+    <section class="flex flex-col pb-36 md:pb-72">
+        {%include 'partials/navbar.html'%}
+        <div class="text-white flex flex-col pt-24 md:pt-72 pb-2 md:pb-7 justify-center items-center">
+            <p class="text-3xl md:text-7xl">Who's watching?</p>
+        </div>
+        
+        <div class="flex flex-wrap justify-center container mx-auto items-center w-10/12  md:w-6/12">
+    
+            {% for profile in profiles %} 
+                <div class="pt-8 w-20 h-20 lg:w-32 lg:h-32 xl:w-48 xl:h-48 md:w-28 md:h-28 my-3 mx-3 xl:mx-6 flex justify-center items-center flex-col rounded-md cursor-pointer">
+                    <a href="{%url 'core:movies_list' profile_id=profile.uuid%}">
+                        <img src="{%static 'profile_red.png'%}" class="rounded-md"alt="profile picture">
+                        <p class='text-sm text-center pt-2 md:text-lg text-gray-400'>
+                            {{profile.name}}
+                        </p>
+                    </a>
+                </div>   
+            {% endfor %}
+    
+        </div>
+        <div class="text-white flex justify-center pt-6">
+            <a href="{%url 'core:create_profile'%}" class="mb-7 mt-4 p-3 items-center hover:text-gray-400">
+                <div class="flex justify-center text-6xl xl:text-9xl text-gray-500"><i class="fa fa-plus-circle" aria-hidden="true"></i></div>
+                <p class="text-gray-400 pt-4 text-center text-sm md:text-md xl:text-xl">Add Profile</p> 
+            </a>
+        </div> 
+    </section>
+</div>
+
+{%endblock%}

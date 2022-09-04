@@ -1,0 +1,69 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block title%} - Create Profile{%endblock%}
+
+{%block content%}
+
+
+<div id="bg_login" class="hidden md:block">
+    <a href="/"><img src="{%static 'netflix_logo.png'%}" class="h-16 w-48 pt-5 pl-6" alt="logo"></a>
+    <div class="flex justify-center mt-5">
+        <div class="pt-12 pl-14 pb-24 container max-w-md mb-24 pr-16 bg-black bg-opacity-70">
+            <p class="text-white font-bold text-4xl pb-6 text-left">
+                Create A Profile
+            </p>
+            <form action="" method="POST" class="flex flex-col mt-4">{%csrf_token%}
+                {%if request.user.profiles.all|length > 3%}
+                    <p class="text-white text-xl bg-yellow-700 mx-6 rounded-md items-center px-6 py-2">
+                        Sorry, You can't create any more profiles on this account.
+                    </p>
+                {%else%}
+                    <input required type="text" name="name" id="id_name" class="text-white h-12 text-md px-6 mb-4 bg-slate-700 rounded-md" placeholder="Profile Name">
+                    <Label class="text-gray-400 pb-1">
+                        Maturity Level
+                    </Label>
+                    <div class="flex justify-center">
+                        <select name="age_limit" id="id_age_limit" class="text-white w-full h-12 text-md px-6 mb-11 bg-slate-700 rounded-md">
+                            <option value="Adult">Adult</option>
+                            <option value="Kids">Kids</option>
+                        </select>
+                    </div>  
+                    
+                    <div class="flex justify-center">
+                        <button class="font-semibold bg-red-600 h-12 md:h-11 rounded-md text-white text-md w-full md:text-md items-center md:mt-0 md:px-4 py-2">Create Profile</button>
+                    </div> 
+                    
+                {%endif%}   
+            </form>
+        </div>
+    </div>
+</div>
+<div class="bg-black h-screen md:hidden">
+    <a href="/"><img src="{%static 'netflix_logo.png'%}" class="h-14 w-44 md:h-20 md:w-52 pt-3 pl-4 md:pt-8 md:pl-10" alt="logo"></a> 
+    <p class="text-white font-bold text-3xl mt-9 mb-6 ml-6 md:hidden">Create A Profile</p>
+    <form action="" method="POST" class="px-6 mt-4">{%csrf_token%}
+        {%if request.user.profiles.all|length > 3%}
+            <p class="text-white text-sm bg-yellow-700 mx-6 rounded-md items-center px-6 py-2">
+                Sorry, You can't create any more profiles on this account.
+            </p>
+        {%else%}
+            <input required type="text" name="name" id="id_name" class="text-white w-full h-12 text-sm px-6 mb-4 bg-slate-700 rounded-sm" placeholder="Profile Name">
+            <Label class="text-gray-400 pb-1">
+                Maturity Level
+            </Label>
+            <div class="flex justify-center">
+                <select id="id_age_limit" name="age_limit" class="text-white w-full h-12 text-sm pl-6 mb-11 bg-slate-700 rounded-sm">
+                    <option value="Adult">Adult</option>
+                    <option value="Kids">Kids</option>
+                </select>
+            </div>
+            <div class="flex justify-center">
+                <button class="font-semibold bg-red-600 h-12 w-full md:w-48 md:h-14 rounded-sm text-white text-md md:text-2xl items-center flex justify-center md:mt-0 md:px-4 py-2">Create Profile</button>
+            </div>
+            
+        {%endif%}    
+    </form>
+</div>
+
+{%endblock%}
