@@ -55,8 +55,8 @@ class MoviesList(View):
     def get(self,request,profile_id,*args,**kwargs):
         try:
             profile=Profile.objects.get(uuid=profile_id)
-            movies=Movie.objects.filter(age_limit=profile.age_limit)
-            showcase = movies
+            movies=Movie.objects.all()
+            showcase = movies[0]
             context={'movies':movies , 'showcase':showcase}
             if profile not in request.user.profiles.all():
                 return redirect('core:profile_list')
