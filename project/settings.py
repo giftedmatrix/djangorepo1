@@ -28,24 +28,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-IS_HEROKU = "SECRET_KEY" in os.environ
-
-if 'SECRET_KEY' in os.environ:
-    SECRET_KEY = os.environ["SECRET_KEY"]
+SECRET_KEY = os.environ("SECRET_KEY")
 
 
 # Generally avoid wildcards(*). However since Heroku router provides hostname validation it is ok
-if IS_HEROKU:
-    ALLOWED_HOSTS = ["*"]
-else:
-    ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [".herokuapp.com"]
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if not IS_HEROKU:
-    DEBUG = False
-else:
-    DEBUG = True
-
+DEBUG = False
 # Application definition
 
 INSTALLED_APPS = [
