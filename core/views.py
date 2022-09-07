@@ -55,7 +55,7 @@ class MoviesList(View):
     def get(self,request,profile_id,*args,**kwargs):
         try:
             profile=Profile.objects.get(uuid=profile_id)
-            movies=Movie.objects.all()
+            movies=Movie.objects.filter(age_limit=profile.age_limit)
             showcase = movies[0]
             context={'movies':movies , 'showcase':showcase}
             if profile not in request.user.profiles.all():
@@ -82,7 +82,7 @@ class PlayMovie(View):
         try:
             movie=Movie.objects.get(uuid=movie_id)
             movie=movie.videos.values()
-            showcase= movie
+            showcase= movie[0]
             context={'movie':list(movie),'showcase':showcase}
             return render(request,'playmovie.html',context)
         except Movie.DoesNotExist:
