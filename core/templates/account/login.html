@@ -12,7 +12,7 @@
                 {%if form.errors%}
                 <div class="pb-4">
                     <p class="text-white text-sm bg-yellow-700 mx-2 rounded-md items-center px-6 py-2">
-                        There was an error in the form. Please try again or <span class="underline"><a href="/">create a new account.</a></span> 
+                        There was an error in the form. Please try again or <span class="underline"><a href="/accounts/signup">create a new account.</a></span> 
                     </p>
                 </div>    
                 {%endif%}
@@ -55,7 +55,7 @@
     </div>     
 </div>
 <div class="bg-black h-screen md:hidden">
-    <a href="/"><img src="{%static 'netflix_logo.png'%}" class="h-8 w-24 pt-3 pl-4 md:pt-8 md:pl-10" alt="logo"></a> 
+    <a href="/home"><img src="{%static 'netflix_logo.png'%}" class="h-8 w-24 pt-3 pl-4 md:pt-8 md:pl-10" alt="logo"></a> 
     <p class="text-white font-bold text-3xl mt-9 mb-6 ml-6 md:hidden">Sign In</p>
     <form action="" method="POST" class="px-6 mt-4">{%csrf_token%}
         {%if form.errors%}
