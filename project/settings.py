@@ -28,7 +28,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-#SECRET_KEY = "scql_7(g@5!@j6v-*5j@(d4#4p5_uf=72z2d3c&j9ydipdu+$w"
 
 SECRET_KEY = os.environ["SECRET_KEY"]
 
