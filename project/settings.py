@@ -34,7 +34,7 @@ SECRET_KEY = "scql_7(g@5!@j6v-*5j@(d4#4p5_uf=72z2d3c&j9ydipdu+$w"
 
 
 # Generally avoid wildcards(*). However since Heroku router provides hostname validation it is ok
-ALLOWED_HOSTS = [".herokuapp.com"]
+ALLOWED_HOSTS = ["nettflixxclone.herokuapp.com"]
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
