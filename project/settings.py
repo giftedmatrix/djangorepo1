@@ -181,4 +181,8 @@ CSRF_COOKIE_SECURE              = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS  = True
 SECURE_HSTS_SECONDS             = 1000000
 SECURE_FRAME_DENY               = True
+<<<<<<< HEAD
 SESSION_COOKIE_DOMAIN           = 'nettflixxclone.herokuapp.com'
+=======
+SESSION_COOKIE_DOMAIN           = 'nettflixxclone.herokuapp.com'
+>>>>>>> b0f24b579102d721eaba5599b5eba85348262d62
