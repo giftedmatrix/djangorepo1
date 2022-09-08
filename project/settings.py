@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-
+#SECRET_KEY = config('SECRET_KEY')
 SECRET_KEY = os.environ["SECRET_KEY"]
 
 
@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
     'core',
 
     #Third-Party Apps
