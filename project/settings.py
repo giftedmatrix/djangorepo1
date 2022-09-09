@@ -200,7 +200,7 @@ LOGGING = {
     'disable_existing_loggers': False,
     'handlers': {
         'console': {
-            'class': logging.StreamHandler,
+            'class': 'logging.StreamHandler',
         },
     },
     'loggers': {
