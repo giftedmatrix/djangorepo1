@@ -15,6 +15,7 @@ import os
 from decouple import config
 import django_heroku
 import dj_database_url
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -33,11 +34,17 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 
 
 # Generally avoid wildcards(*). However since Heroku router provides hostname validation it is ok
-ALLOWED_HOSTS = ["nettflixxclone.herokuapp.com"]
+
+DEBUG = False
+
+if DEBUG:
+    ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+else:
+    ALLOWED_HOSTS = ['https://nettflixxclone.herokuapp.com/']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -93,13 +100,17 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    },
-}
+#DATABASES = {
+ #   'default': {
+ #       'ENGINE': 'django.db.backends.sqlite3',
+       # 'NAME': BASE_DIR / 'db.sqlite3',
+ #   },
+#}
+DATABASE_URL = os.environ['DATABASE_URL']
 
+DATABASES = {}
+
+DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -165,7 +176,8 @@ AUTHENTICATION_BACKENDS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-django_heroku.settings(locals())
+
+load_dotenv()
 
 CSRF_TRUSTED_ORIGINS = [
     'https://nettflixxclone.herokuapp.com'
@@ -181,3 +193,24 @@ CSRF_COOKIE_SECURE              = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS  = True
 SECURE_HSTS_SECONDS             = 1000000
 SECURE_FRAME_DENY               = True
+
+import logging
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': logging.StreamHandler,
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
+        },
+    },
+}
+
+django_heroku.settings(locals())
+options = DATABASES['default'].get('OPTIONS', {})
+options.pop('sslmode', None)
