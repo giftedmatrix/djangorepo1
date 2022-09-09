@@ -10,14 +10,15 @@
 <section class="bg-black overflow-x-hidden h-screen">
     <img class="flex justify-center mx-auto my-4"src="{{movie.flyers.url}}" alt="">
     <p class="text-white flex sm:flex sm:justify-center font-bold text-2xl mx-4">{{movie.title}}</p>
-    <a href="{%url 'movie.movies.url'%}">
-        <div class="flex justify-center">
-            <button class="bg-white my-6 text-black w-80 sm:w-96 rounded-sm h-12 mx-4">
-                <i class="fa fa-play" aria-hidden="true"></i> &nbsp;Play
-            </button>
-        </div>
-       
-    </a>
+    {%if movie.title == 'BLACK ADAM'%}
+        <a href="https://nettflixclone.s3.amazonaws.com/movies/Black_Adam___Official_Trailer_2___DC.mp4?AWSAccessKeyId=AKIAXB7M5SGSR76IY2EH&Signature=68v3pYgmSVVi6RheiDxXYJr1Y0k%3D&Expires=1662752561">
+            <div class="flex justify-center">
+                <button class="bg-white my-6 text-black w-80 sm:w-96 rounded-sm h-12 mx-4">
+                    <i class="fa fa-play" aria-hidden="true"></i> &nbsp;Play
+                </button>
+            </div>   
+        </a>
+    {%endif%}
     {%if movie.type == 'Seasonal'%}
         <p class="text-gray-200">Episode</p>
         {%for episode in movie.videos.all%}
