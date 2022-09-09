@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import Home, MovieDetails, PlayMovie, ProfileList, CreateProfile
+from .views import Home, MovieDetails, ProfileList, CreateProfile
 from .views import MoviesList, IndexPage
 
 app_name = 'core'
