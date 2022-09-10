@@ -3,7 +3,7 @@ from django.views import View
 from .forms import ProfileForm
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
-from .models import Profile, CustomUser, Movie
+from .models import Profile, CustomUser, Movie, Video
 
 user=CustomUser()
 
@@ -56,8 +56,10 @@ class MoviesList(View):
         try:
             profile=Profile.objects.get(uuid=profile_id)
             movies=Movie.objects.filter(age_limit=profile.age_limit)
+            videos = Video.objects.all()
             showcase = movies[0]
-            context={'movies':movies , 'showcase':showcase}
+            film = videos[0]
+            context={'movies':movies , 'showcase':showcase, 'film':film}
             if profile not in request.user.profiles.all():
                 return redirect('core:profile_list')
             return render(request,'movies_list.html',context)
