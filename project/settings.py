@@ -39,6 +39,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['.herokuapp.com/']
 
+DEBUG_COLLECTSTATIC = os.environ['DEBUG_COLLECTSTATIC']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
