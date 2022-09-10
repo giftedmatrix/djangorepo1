@@ -35,11 +35,10 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 
 # Generally avoid wildcards(*). However since Heroku router provides hostname validation it is ok
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['.herokuapp.com/']
 
-DEBUG_COLLECTSTATIC = os.environ['DEBUG_COLLECTSTATIC']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
