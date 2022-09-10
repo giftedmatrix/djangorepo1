@@ -10,78 +10,15 @@
 <section class="bg-black overflow-x-hidden h-screen">
     <img class="flex justify-center mx-auto my-4"src="{{movie.flyers.url}}" alt="">
     <p class="text-white flex sm:flex sm:justify-center font-bold text-2xl mx-4">{{movie.title}}</p>
-    {%if movie.title == 'BLACK ADAM'%}
-        <a href="https://nettflixclone.s3.amazonaws.com/movies/Black_Adam___Official_Trailer_2___DC.mp4">
+    {%for movie in movie'%}
+        <a href="{{movie.videos.url}}">
             <div class="flex justify-center">
                 <button class="bg-white my-6 text-black w-80 sm:w-96 rounded-sm h-12 mx-4">
                     <i class="fa fa-play" aria-hidden="true"></i> &nbsp;Play
                 </button>
             </div>   
         </a>
-    {%endif%}
-    {%if movie.title == 'BLOOD SISTERS'%}
-        <a href="https://nettflixclone.s3.amazonaws.com/movies/Blood_Sisters___Official_Trailer___Netflix.mp4">
-            <div class="flex justify-center">
-                <button class="bg-white my-6 text-black w-80 sm:w-96 rounded-sm h-12 mx-4">
-                    <i class="fa fa-play" aria-hidden="true"></i> &nbsp;Play
-                </button>
-            </div>   
-        </a>
-    {%endif%}
-    {%if movie.title == 'SUPERMAN VS HULK'%}
-        <a href="https://nettflixclone.s3.amazonaws.com/movies/Superman_Vs_Hulk_Animation_Part1_-Taming_The_Beast_II.mp4">
-            <div class="flex justify-center">
-                <button class="bg-white my-6 text-black w-80 sm:w-96 rounded-sm h-12 mx-4">
-                    <i class="fa fa-play" aria-hidden="true"></i> &nbsp;Play
-                </button>
-            </div>   
-        </a>
-    {%endif%}
-    {%if movie.title == 'FINDING HUBBY'%}
-        <a href="https://nettflixclone.s3.amazonaws.com/movies/Finding_Hubby_Teaser.mp4">
-            <div class="flex justify-center">
-                <button class="bg-white my-6 text-black w-80 sm:w-96 rounded-sm h-12 mx-4">
-                    <i class="fa fa-play" aria-hidden="true"></i> &nbsp;Play
-                </button>
-            </div>   
-        </a>
-    {%endif%}
-    {%if movie.title == 'THE IMPERFECTS'%}
-        <a href="https://nettflixclone.s3.amazonaws.com/movies/The_Imperfects___Official_Trailer___Netflix.mp4">
-            <div class="flex justify-center">
-                <button class="bg-white my-6 text-black w-80 sm:w-96 rounded-sm h-12 mx-4">
-                    <i class="fa fa-play" aria-hidden="true"></i> &nbsp;Play
-                </button>
-            </div>   
-        </a>
-    {%endif%}
-    {%if movie.title == 'THE WITCHER'%}
-        <a href="https://nettflixclone.s3.amazonaws.com/movies/THE_WITCHER___MAIN_TRAILER___NETFLIX.mp4">
-            <div class="flex justify-center">
-                <button class="bg-white my-6 text-black w-80 sm:w-96 rounded-sm h-12 mx-4">
-                    <i class="fa fa-play" aria-hidden="true"></i> &nbsp;Play
-                </button>
-            </div>   
-        </a>
-    {%endif%}
-    {%if movie.title == 'THE ADAM PROJECT'%}
-        <a href="https://nettflixclone.s3.amazonaws.com/movies/The_Adam_Project___Official_Trailer___Netflix.mp4">
-            <div class="flex justify-center">
-                <button class="bg-white my-6 text-black w-80 sm:w-96 rounded-sm h-12 mx-4">
-                    <i class="fa fa-play" aria-hidden="true"></i> &nbsp;Play
-                </button>
-            </div>   
-        </a>
-    {%endif%}
-    {%if movie.title == 'THE SANDMAN'%}
-        <a href="https://nettflixclone.s3.amazonaws.com/movies/The_Oldest_Game___The_Sandman___Netflix_Philippines.mp4">
-            <div class="flex justify-center">
-                <button class="bg-white my-6 text-black w-80 sm:w-96 rounded-sm h-12 mx-4">
-                    <i class="fa fa-play" aria-hidden="true"></i> &nbsp;Play
-                </button>
-            </div>   
-        </a>
-    {%endif%}
+    {%endfor%}
     {%if movie.type == 'Seasonal'%}
         <p class="text-gray-200">Episode</p>
         {%for episode in movie.videos.all%}
