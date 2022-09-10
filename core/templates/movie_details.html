@@ -18,7 +18,7 @@
                 </button>
             </div>   
         </a>
-    {%endif%}
+    {%endfor%}
     {%if movie.type == 'Seasonal'%}
         <p class="text-gray-200">Episode</p>
         {%for episode in movie.videos.all%}
