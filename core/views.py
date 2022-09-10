@@ -72,7 +72,8 @@ class MovieDetails(View):
     def get(self,request,movie_id,*args,**kwargs):
         try:
             movie=Movie.objects.get(uuid=movie_id)
-            context={'movie':movie}
+            videos = Video.objects.all()
+            context={'movie':movie, 'videos':videos}
             return render(request,'movie_details.html',context)
         except Movie.DoesNotExist:
             return redirect('core:profile_list')
