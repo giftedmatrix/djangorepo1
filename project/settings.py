@@ -183,11 +183,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 load_dotenv()
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://netchlix.com'
-]
-
-
 django_heroku.settings(locals())
 options = DATABASES['default'].get('OPTIONS', {})
 options.pop('sslmode', None)
