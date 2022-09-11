@@ -37,7 +37,7 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://www.nettflixxclone.herokuapp.com']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
