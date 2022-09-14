@@ -35,7 +35,7 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 
 # Generally avoid wildcards(*). However since Heroku router provides hostname validation it is ok
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['netchlix.com']
 
@@ -144,8 +144,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR/'staticfiles'
-STATICFILES_DIRS = [BASE_DIR/'static']
+STATIC_ROOT = os.path.join(BASE_DIR/'staticfiles')
+STATICFILES_DIRS = (os.path.join(BASE_DIR/'static'),)
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 LOGIN_URL = 'accounts/login'
