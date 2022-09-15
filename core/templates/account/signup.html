@@ -1,8 +1,8 @@
 {%extends 'base.html'%}
-{%load staticfiles%}
+{%load static%}
 {%block content%}
 <div id="bg_login" class="hidden md:block">
-    <a href="/home"><img src="{%staticfiles 'netflix_logo.png'%}" class="h-16 w-48 pt-5 pl-6" alt="logo"></a>
+    <a href="/home"><img src="{%static 'netflix_logo.png'%}" class="h-16 w-48 pt-5 pl-6" alt="logo"></a>
     <div class="flex justify-center mt-5">
         <div class="pt-12 pl-14 pb-24 container max-w-md mb-24 pr-16 bg-black bg-opacity-70">
             <p class="text-white font-bold text-4xl pb-6 text-left">
@@ -59,7 +59,7 @@
     </div>     
 </div>
 <div class="bg-white md:hidden">
-    <a href="/home"><img src="{%staticfiles 'netflix_logo.png'%}" class="h-14 w-44 md:h-20 md:w-52 pt-3 pl-4 md:pt-8 md:pl-10" alt="logo"></a> 
+    <a href="/home"><img src="{%static 'netflix_logo.png'%}" class="h-14 w-44 md:h-20 md:w-52 pt-3 pl-4 md:pt-8 md:pl-10" alt="logo"></a> 
     <p class="text-black font-bold text-3xl mt-9 mb-6 ml-6 md:hidden">Sign Up</p>
     <form action="" method="POST" class=" mt-4 px-6">{%csrf_token%}
         {%if form.errors%}

@@ -1,5 +1,5 @@
 {%extends 'base.html'%}
-{%load staticfiles%}
+{%load static%}
 
 {%block title%} - Profiles{%endblock%}
 
@@ -16,7 +16,7 @@
             {% for profile in profiles %} 
                 <div class="pt-8 w-20 h-20 lg:w-32 lg:h-32 xl:w-48 xl:h-48 md:w-28 md:h-28 my-3 mx-3 xl:mx-6 flex justify-center items-center flex-col rounded-md cursor-pointer">
                     <a href="{%url 'core:movies_list' profile_id=profile.uuid%}">
-                        <img src="{%staticfiles 'profile_red.png'%}" class="rounded-md"alt="profile picture">
+                        <img src="{%static 'profile_red.png'%}" class="rounded-md"alt="profile picture">
                         <p class='text-sm text-center pt-2 md:text-lg text-gray-400'>
                             {{profile.name}}
                         </p>
