@@ -1,6 +1,6 @@
-{%load static%}
+{%load staticfiles%}
 <nav class="flex flex-row justify-between mt-7 md:mx-6">
-    <a href="/home"><img src="{%static 'netflix_logo.png'%}" class="h-6 w-34 pl-6 md:pl-8 md:h-9 md:w-44"alt="logo"></a>
+    <a href="/home"><img src="{%staticfiles 'netflix_logo.png'%}" class="h-6 w-34 pl-6 md:pl-8 md:h-9 md:w-44"alt="logo"></a>
     <a href="{%url 'account_login'%}">
         {%if request.user.is_authenticated%}
         <form action="{%url 'account_logout'%}" method="POST">{%csrf_token%}
