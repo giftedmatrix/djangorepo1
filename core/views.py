@@ -77,3 +77,4 @@ class MovieDetails(View):
             return render(request,'movie_details.html',context)
         except Movie.DoesNotExist:
             return redirect('core:profile_list')
+
