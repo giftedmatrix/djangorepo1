@@ -35,7 +35,7 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 
 # Generally avoid wildcards(*). However since Heroku router provides hostname validation it is ok
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*",'nettflixxclone.herokuapp.com']
 
@@ -45,6 +45,7 @@ ALLOWED_HOSTS = ["*",'nettflixxclone.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -145,8 +146,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR,"staticfiles")
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'static'),]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 LOGIN_URL = 'accounts/login'
