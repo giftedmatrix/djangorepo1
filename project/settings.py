@@ -29,8 +29,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-#SECRET_KEY = config('SECRET_KEY')
-SECRET_KEY = os.environ["SECRET_KEY"]
+SECRET_KEY = config('SECRET_KEY')
+#SECRET_KEY = os.environ["SECRET_KEY"]
 
 
 # Generally avoid wildcards(*). However since Heroku router provides hostname validation it is ok
@@ -104,8 +104,8 @@ WSGI_APPLICATION = 'project.wsgi.application'
     #    'NAME': BASE_DIR / 'db.sqlite3',
   #  },
 #}
-DATABASE_URL = os.environ['DATABASE_URL']
-#DATABASE_URL = config('DATABASE_URL')
+#DATABASE_URL = os.environ['DATABASE_URL']
+DATABASE_URL = config('DATABASE_URL')
 
 DATABASES = {}
 
@@ -165,9 +165,11 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
-AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+#AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 AWS_STORAGE_BUCKET_NAME = 'nettflixclone'
-AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+#AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
 AWS_QUERYSTRING_AUTH = False
 
 AUTHENTICATION_BACKENDS = [

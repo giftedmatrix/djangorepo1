@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-#index{
-    background-image: url('../static/indexpics.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 #section1{
     background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('../static/netflix_bg.jpg');
