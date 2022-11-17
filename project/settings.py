@@ -37,7 +37,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ["*",'nettflixxclone.herokuapp.com']
+ALLOWED_HOSTS = ['nettflixxclone.herokuapp.com']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
