@@ -1447,20 +1447,14 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
-#index{
-  background-image: url('../static/indexpics.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 #section1{
-  background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('../static/netflix_bg.jpg');
+  background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url("../staticfiles/netflix_bg.jpg");
   background-repeat: no-repeat;
   background-size:cover;
 }
 
 #bg_login{
-  background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('../static/background_netflix.jpg');
+  background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('../staticfiles/background_netflix.jpg');
   background-repeat: no-repeat;
   background-size:cover;
   height:100vh;
