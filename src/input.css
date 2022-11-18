@@ -4,13 +4,13 @@
 
 
 #section1{
-    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url("../staticfiles/netflix_bg.jpg");
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url("../staticfiles/netflix_bg.4c39e076d500.jpg");
     background-repeat: no-repeat;
     background-size:cover;   
 }
 
 #bg_login{
-    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('../staticfiles/background_netflix.jpg');
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('../staticfiles/background_netflix.d8b13636d1a7.jpg');
     background-repeat: no-repeat;
     background-size:cover;   
     height:100vh;
