@@ -3,20 +3,6 @@
 @tailwind utilities;
 
 
-#section1{
-    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url("../core/static/netflix_bg.jpg");
-    background-repeat: no-repeat;
-    background-size:cover;   
-}
-
-#bg_login{
-    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('../core/static/background_netflix.jpg');
-    background-repeat: no-repeat;
-    background-size:cover;   
-    height:100vh;
-}
-
-
 #movies_list{
     background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3));
     background-repeat: no-repeat;
