@@ -1448,16 +1448,11 @@ video {
 }
 
 #section1{
-  background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url("../staticfiles/netflix_bg.jpg");
-  background-repeat: no-repeat;
-  background-size:cover;
+  background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3));
 }
 
 #bg_login{
-  background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('../staticfiles/background_netflix.jpg');
-  background-repeat: no-repeat;
-  background-size:cover;
-  height:100vh;
+  background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3));
 }
 
 #movies_list{
