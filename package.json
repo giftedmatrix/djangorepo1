@@ -4,7 +4,7 @@
     "tailwindcss": "^3.1.6"
   },
   "scripts":{
-    "build":"tailwindcss -i ./src/input.css -o ./staticfiles/main.css",
-    "watch":"tailwindcss -i ./src/input.css -o ./staticfiles/main.css --watch"
+    "build":"tailwindcss -i ./src/input.css -o ./core/static/main.css",
+    "watch":"tailwindcss -i ./src/input.css -o ./core/static/main.css --watch"
   }
 }
