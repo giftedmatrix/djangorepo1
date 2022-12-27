@@ -4,6 +4,7 @@
     "tailwindcss": "^3.1.6"
   },
   "scripts":{
+    "start": "node index.js",
     "build":"tailwindcss -i ./src/input.css -o ./core/static/main.css",
     "watch":"tailwindcss -i ./src/input.css -o ./core/static/main.css --watch"
   }
