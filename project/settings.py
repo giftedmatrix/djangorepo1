@@ -37,7 +37,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['netchlix.com','nettflixxclone.herokuapp.com','www.netchlix.com']
+ALLOWED_HOSTS = ['netchlix.com','www.netchlix.com']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
