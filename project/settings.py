@@ -37,7 +37,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['netchlix.com','www.netchlix.com']
+ALLOWED_HOSTS = ['netchlix.com','www.netchlix.com','safe-dingo-96akvy2o5h7g45lhw1ydkrle.herokudns.com']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
